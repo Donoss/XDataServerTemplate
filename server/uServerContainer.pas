@@ -11,10 +11,8 @@ uses
 
 type
   TServerContainer = class(TDataModule)
-    SparkleHttpSysDispatcher: TSparkleHttpSysDispatcher;
+    Dispatcher: TSparkleHttpSysDispatcher;
     XDataServer: TXDataServer;
-    XDataConnectionPool: TXDataConnectionPool;
-    AureliusConnection: TAureliusConnection;
   end;
 
 var

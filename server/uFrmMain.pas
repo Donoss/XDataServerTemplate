@@ -34,13 +34,13 @@ resourcestring
 
 procedure TFrmMain.btStartClick(ASender: TObject);
 begin
-  ServerContainer.SparkleHttpSysDispatcher.Start;
+  ServerContainer.Dispatcher.Start;
   UpdateGUI;
 end;
 
 procedure TFrmMain.btStopClick(ASender: TObject);
 begin
-  ServerContainer.SparkleHttpSysDispatcher.Stop;
+  ServerContainer.Dispatcher.Stop;
   UpdateGUI;
 end;
 
@@ -54,9 +54,9 @@ const
   cHttp = 'http://+';
   cHttpLocalhost = 'http://localhost';
 begin
-  btStart.Enabled := not ServerContainer.SparkleHttpSysDispatcher.Active;
+  btStart.Enabled := not ServerContainer.Dispatcher.Active;
   btStop.Enabled := not btStart.Enabled;
-  if ServerContainer.SparkleHttpSysDispatcher.Active then
+  if ServerContainer.Dispatcher.Active then
     mmInfo.Lines.Add(SServerStartedAt + StringReplace(
       ServerContainer.XDataServer.BaseUrl,
       cHttp, cHttpLocalhost, [rfIgnoreCase]))
