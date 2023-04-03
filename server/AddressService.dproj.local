@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/05 10:08:52.000.192,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
+    <Transaction>2022/11/22 17:29:37.000.912,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
+    <Transaction>2022/11/22 17:29:45.000.608,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.pas</Transaction>
+    <Transaction>2023/04/01 14:55:09.000.410,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
+    <Transaction>2023/04/03 10:50:53.725,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
+    <Transaction>2023/04/03 10:50:54.367,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.pas</Transaction>
+    <Transaction>2023/04/03 10:53:57.550,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uServerContainer.dfm=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.dfm</Transaction>
+    <Transaction>2023/04/03 10:53:57.550,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uServerContainer.pas=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
+    <Transaction>2023/04/03 10:54:16.919,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uFrmMain.dfm=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.dfm</Transaction>
+    <Transaction>2023/04/03 10:54:16.919,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uFrmMain.pas=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.pas</Transaction>
+    <Transaction>2023/04/03 10:54:28.383,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\AddressService.dproj=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Project9.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<PDonoss iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
