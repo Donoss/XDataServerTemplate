@@ -17,6 +17,14 @@ type
     procedure FormCreate(ASender: TObject);
   strict private
     procedure UpdateGUI;
+
+  private
+    function GetIsServiceRunning: Boolean;
+    function GetBaseUrl: string;
+
+  public
+    property IsServiceRunning: Boolean read GetIsServiceRunning;
+    property BaseUrl: string read GetBaseUrl;
   end;
 
 var
@@ -34,13 +42,13 @@ resourcestring
 
 procedure TFrmMain.btStartClick(ASender: TObject);
 begin
-  ServerContainer.SparkleHttpSysDispatcher.Start;
+  TServerContainer.Shared.StartServer;
   UpdateGUI;
 end;
 
 procedure TFrmMain.btStopClick(ASender: TObject);
 begin
-  ServerContainer.SparkleHttpSysDispatcher.Stop;
+  TServerContainer.Shared.StopServer;
   UpdateGUI;
 end;
 
@@ -49,16 +57,26 @@ begin
   UpdateGUI;
 end;
 
+function TFrmMain.GetBaseUrl: string;
+begin
+  Result := TServerContainer.Shared.BaseUrl;
+end;
+
+function TFrmMain.GetIsServiceRunning: Boolean;
+begin
+  Result := TServerContainer.Shared.IsServiceRunning;
+end;
+
 procedure TFrmMain.UpdateGUI;
 const
   cHttp = 'http://+';
   cHttpLocalhost = 'http://localhost';
 begin
-  btStart.Enabled := not ServerContainer.SparkleHttpSysDispatcher.Active;
+  btStart.Enabled := not IsServiceRunning;
   btStop.Enabled := not btStart.Enabled;
-  if ServerContainer.SparkleHttpSysDispatcher.Active then
+  if IsServiceRunning then
     mmInfo.Lines.Add(SServerStartedAt + StringReplace(
-      ServerContainer.XDataServer.BaseUrl,
+      BaseUrl,
       cHttp, cHttpLocalhost, [rfIgnoreCase]))
   else
     mmInfo.Lines.Add(SServerStopped);
