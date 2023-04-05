@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions/>
-  <Default.Personality>
-    <Projects ActiveProject="\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\AddressService.dproj"/>
-  </Default.Personality>
+	<Transactions>
+    <Transaction>2023/04/04 17:39:35.180,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\XDataServerTemplateGroup.groupproj=\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\AddressServiceGroup.groupproj</Transaction>
+  </Transactions>
+	<Default.Personality>
+		<Projects ActiveProject="\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\XDataServerTemplate.dproj"/>
+	</Default.Personality>
 </BorlandProject>

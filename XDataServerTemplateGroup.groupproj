@@ -3,7 +3,7 @@
         <ProjectGuid>{3517FD0C-D548-401B-9331-38DC4B9FCBA1}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="server\AddressService.dproj">
+        <Projects Include="server\XDataServerTemplate.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -14,23 +14,23 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="AddressService">
-        <MSBuild Projects="server\AddressService.dproj"/>
+    <Target Name="XDataServerTemplate">
+        <MSBuild Projects="server\XDataServerTemplate.dproj"/>
     </Target>
-    <Target Name="AddressService:Clean">
-        <MSBuild Projects="server\AddressService.dproj" Targets="Clean"/>
+    <Target Name="XDataServerTemplate:Clean">
+        <MSBuild Projects="server\XDataServerTemplate.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="AddressService:Make">
-        <MSBuild Projects="server\AddressService.dproj" Targets="Make"/>
+    <Target Name="XDataServerTemplate:Make">
+        <MSBuild Projects="server\XDataServerTemplate.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="AddressService"/>
+        <CallTarget Targets="XDataServerTemplate"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AddressService:Clean"/>
+        <CallTarget Targets="XDataServerTemplate:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AddressService:Make"/>
+        <CallTarget Targets="XDataServerTemplate:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
