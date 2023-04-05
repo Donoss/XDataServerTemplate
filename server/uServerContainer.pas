@@ -13,15 +13,76 @@ type
   TServerContainer = class(TDataModule)
     Dispatcher: TSparkleHttpSysDispatcher;
     XDataServer: TXDataServer;
+  private
+    class var FInstance: TServerContainer;
+    function GetIsServiceRunning: Boolean;
+    function GetBaseUrl: string;
+
+  public
+    class function Shared: TServerContainer;
+    class destructor Destroy;
+
+    procedure StartServer;
+    procedure StopServer;
+
+    property IsServiceRunning: Boolean read GetIsServiceRunning;
+    property BaseUrl: string read GetBaseUrl;
+
   end;
 
-var
-  ServerContainer: TServerContainer;
+
 
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+{ TServerContainer }
+
+class destructor TServerContainer.Destroy;
+begin
+  FInstance.Free;
+end;
+
+function TServerContainer.GetBaseUrl: string;
+begin
+  Result := XDataServer.BaseUrl;
+end;
+
+function TServerContainer.GetIsServiceRunning: Boolean;
+begin
+  Result := Dispatcher.Active;
+end;
+
+class function TServerContainer.Shared: TServerContainer;
+begin
+ if not Assigned ( FInstance ) then
+ begin
+   FInstance := TserverContainer.Create(nil);
+ end;
+
+ Result := FInstance;
+end;
+
+procedure TServerContainer.StartServer;
+begin
+  if not IsServiceRunning then
+  begin
+    //  TODO: Set Config
+
+    Dispatcher.Start;
+  end;
+
+end;
+
+procedure TServerContainer.StopServer;
+begin
+  if IsServiceRunning then
+  begin
+    Dispatcher.Stop;
+  end;
+
+end;
 
 end.
