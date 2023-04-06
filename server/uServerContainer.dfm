@@ -9,6 +9,11 @@ object ServerContainer: TServerContainer
     BaseUrl = 'http://+:80/donoss'
     Dispatcher = Dispatcher
     EntitySetPermissions = <>
+    SwaggerOptions.Enabled = True
+    SwaggerUIOptions.Enabled = True
+    SwaggerUIOptions.ShowFilter = True
+    SwaggerUIOptions.DisplayOperationId = True
+    SwaggerUIOptions.TryItOutEnabled = True
     Left = 216
     Top = 16
   end

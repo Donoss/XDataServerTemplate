@@ -1,0 +1,21 @@
+unit uAddressServiceImp;
+
+interface
+
+uses
+  XData.Server.Module,
+  XData.Service.Common,
+  AddressService;
+
+type
+  [ServiceImplementation]
+  TAddressService = class(TInterfacedObject, IAddressService)
+  end;
+
+implementation
+
+
+initialization
+  RegisterServiceType(TAddressService);
+
+end.

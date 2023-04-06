@@ -1,0 +1,30 @@
+unit uAddressServiceImp;
+
+interface
+
+uses
+  XData.Server.Module,
+  XData.Service.Common,
+  uAddressService;
+
+type
+  [ServiceImplementation]
+  TAddressService = class(TInterfacedObject, IAddressService)
+
+    function Echo( AText: String ): String;
+  end;
+
+implementation
+
+
+{ TAddressService }
+
+function TAddressService.Echo(AText: String): String;
+begin
+  Result := AText + AText;
+end;
+
+initialization
+  RegisterServiceType(TAddressService);
+
+end.
