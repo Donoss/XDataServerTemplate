@@ -135,6 +135,13 @@
         <DCCReference Include="Services\uAddressService.pas"/>
         <DCCReference Include="Services\uAddressServiceImpl.pas"/>
         <DCCReference Include="ProxyClasses\uProxyClasses.pas"/>
+        <DCCReference Include="Database\uDbController.pas">
+            <Form>DbController</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Template\uServerSettings.pas"/>
+        <None Include="etc\server.ini"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -176,6 +183,12 @@
                 <DeployFile LocalName="Win64\Debug\XDataServerTemplate.rsm" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win64">
                         <RemoteName>XDataServerTemplate.rsm</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="etc\server.ini" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

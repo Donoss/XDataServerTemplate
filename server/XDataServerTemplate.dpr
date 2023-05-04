@@ -6,7 +6,9 @@ uses
   uFrmMain in 'uFrmMain.pas' {FrmMain},
   uAddressService in 'Services\uAddressService.pas',
   uAddressServiceImpl in 'Services\uAddressServiceImpl.pas',
-  uProxyClasses in 'ProxyClasses\uProxyClasses.pas';
+  uProxyClasses in 'ProxyClasses\uProxyClasses.pas',
+  uDbController in 'Database\uDbController.pas' {DbController: TDataModule},
+  uServerSettings in 'Template\uServerSettings.pas';
 
 {$R *.res}
 

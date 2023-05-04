@@ -1,0 +1,88 @@
+unit uServerSettings;
+
+interface
+
+uses
+  Classes,
+  IniFiles;
+
+type
+  TServerSettings = class
+  strict private
+    class var FInstance: TServerSettings;
+
+  private
+    function GetBaseUrl: String;
+    function GetConnectionDefName: string;
+    function GetDriverName: String;
+    function GetExtUrl: String;
+    function GetFilename: String;
+    function GetLoggingFilename: String;
+
+  public
+    class destructor Destroy;
+    class function Shared: TServerSettings;
+
+    property DriverName: String read GetDriverName;
+    property ConnectionDefName: string read GetConnectionDefName;
+    property BaseUrl: String read GetBaseUrl;
+    property ExtUrl: String read GetExtUrl;
+
+    property LoggingFilename: String read GetLoggingFilename;
+
+    property Filename: String read GetFilename;
+
+  end;
+
+implementation
+
+{ TServerSettings }
+
+class destructor TServerSettings.Destroy;
+begin
+  if Assigned( FInstance ) then
+  begin
+    FInstance.Free;
+  end;
+end;
+
+function TServerSettings.GetBaseUrl: String;
+begin
+
+end;
+
+function TServerSettings.GetConnectionDefName: string;
+begin
+
+end;
+
+function TServerSettings.GetDriverName: String;
+begin
+
+end;
+
+function TServerSettings.GetExtUrl: String;
+begin
+
+end;
+
+function TServerSettings.GetFilename: String;
+begin
+
+end;
+
+function TServerSettings.GetLoggingFilename: String;
+begin
+
+end;
+
+class function TServerSettings.Shared: TServerSettings;
+begin
+  if not Assigned( FInstance ) then
+  begin
+    FInstance := TServerSettings.Create;
+  end;
+  Result := FInstance;
+end;
+
+end.

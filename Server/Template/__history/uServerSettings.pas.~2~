@@ -1,0 +1,43 @@
+unit uServerSettings;
+
+interface
+
+uses
+  Classes,
+  IniFiles;
+
+type
+  TServerSettings = class
+  strict private
+    class var FInstance: TServerSettings;
+
+  private
+
+  public
+    class destructor Destroy;
+    class function Shared: TServerSettings;
+
+  end;
+
+implementation
+
+{ TServerSettings }
+
+class destructor TServerSettings.Destroy;
+begin
+  if Assigned( FInstance ) then
+  begin
+    FInstance.Free;
+  end;
+end;
+
+class function TServerSettings.Shared: TServerSettings;
+begin
+  if not Assigned( FInstance ) then
+  begin
+    FInstance := TServerSettings.Create;
+  end;
+  Result := FInstance;
+end;
+
+end.

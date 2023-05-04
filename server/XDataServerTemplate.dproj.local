@@ -7,10 +7,10 @@
     <Transaction>2023/04/01 14:55:09.000.410,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
     <Transaction>2023/04/03 10:50:53.000.725,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
     <Transaction>2023/04/03 10:50:54.000.367,=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.pas</Transaction>
-    <Transaction>2023/04/03 10:53:57.000.550,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uServerContainer.pas=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
     <Transaction>2023/04/03 10:53:57.000.550,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uServerContainer.dfm=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.dfm</Transaction>
-    <Transaction>2023/04/03 10:54:16.000.919,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uFrmMain.pas=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.pas</Transaction>
+    <Transaction>2023/04/03 10:53:57.000.550,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uServerContainer.pas=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit10.pas</Transaction>
     <Transaction>2023/04/03 10:54:16.000.919,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uFrmMain.dfm=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.dfm</Transaction>
+    <Transaction>2023/04/03 10:54:16.000.919,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\uFrmMain.pas=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Unit11.pas</Transaction>
     <Transaction>2023/04/03 10:54:28.000.383,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\AddressService.dproj=\\Mac\Home\Documents\Embarcadero\Studio\Projects\Project9.dproj</Transaction>
     <Transaction>2023/04/04 17:38:56.000.876,\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\AddressService.dproj=\\Mac\Home\Documents\Git\Donoss\Projects\Services\AddressService\server\XDataServerTemplate.dproj</Transaction>
     <Transaction>2023/04/05 09:35:09.000.947,=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\AddressService.pas</Transaction>
@@ -21,6 +21,13 @@
     <Transaction>2023/04/05 16:13:06.000.635,=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Unit1.pas</Transaction>
     <Transaction>2023/04/05 16:14:06.000.306,\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Unit1.pas=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\ProxyClasses\uProxyClasses.pas</Transaction>
     <Transaction>2023/04/05 16:37:13.000.924,\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Services\uAddressServiceImp.pas=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\Server\Services\uAddressServiceImpl.pas</Transaction>
+    <Transaction>2023/04/10 11:05:18.000.528,=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Unit1.pas</Transaction>
+    <Transaction>2023/04/10 11:06:23.000.250,\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Unit1.pas=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Database\uDbController.pas</Transaction>
+    <Transaction>2023/04/10 11:06:23.000.250,\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Unit1.dfm=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Database\uDbController.dfm</Transaction>
+    <Transaction>2023/04/21 17:10:49.000.683,=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\New1.ini</Transaction>
+    <Transaction>2023/04/21 17:13:05.000.216,\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\etc\server.ini=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\New1.ini</Transaction>
+    <Transaction>2023/04/21 17:24:04.000.122,=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Unit1.pas</Transaction>
+    <Transaction>2023/04/21 17:25:29.000.634,\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Template\uServerSettings.pas=\\Mac\Home\Documents\Git\Donoss\Projects\Services\XDataServerTemplate\server\Unit1.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<PDonoss iOSSimulator="iPhone5"/>
