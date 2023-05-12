@@ -45,7 +45,7 @@ uses
   System.IOUtils;
 
 const
-  C_FILENAME = 'server.ini';
+  C_FILENAME = '..\etc\server.ini';
 
 { TServerSettings }
 
@@ -92,7 +92,7 @@ begin
     self.GetFilename );
 
 
-  Result := TIniFile.Create( self.GetFilename );
+  Result := TIniFile.Create( LFilename );
 end;
 
 function TServerSettings.GetIniString(ASection, AIdent,
