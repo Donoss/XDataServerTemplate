@@ -34,6 +34,10 @@ implementation
 
 {$R *.dfm}
 
+uses
+
+  uServerSettings;
+
 resourcestring
   SServerStopped = 'Server stopped';
   SServerStartedAt = 'Server started at ';

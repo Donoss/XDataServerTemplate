@@ -1,0 +1,17 @@
+  ; Server Config
+
+  ; Db connection for FireDAC
+  [Connection]
+  User_Name=SYSDBA
+  Password=masterkey
+  Database=
+  Port=3054
+  Pooling=True
+
+  ; Firebird driver
+  [Driver]
+  Name=FB
+
+  ; Connection definition
+  [Definition]
+  Name=xDataTemplate

@@ -1,0 +1,139 @@
+unit uServerSettings;
+
+interface
+
+uses
+  Classes,
+  IniFiles;
+
+type
+  TServerSettings = class
+  strict private
+    class var FInstance: TServerSettings;
+
+    function GetIniFile: TIniFile;
+    function GetIniString( ASection, AIdent: String; ADefault: String ) : String;
+
+
+  private
+    function GetBaseUrl: String;
+    function GetConnectionDefName: string;
+    function GetDriverName: String;
+    function GetExtUrl: String;
+    function GetFilename: String;
+    function GetLoggingFilename: String;
+
+  public
+    class destructor Destroy;
+    class function Shared: TServerSettings;
+
+    procedure LoadConnectionParams (AParams: TStrings );
+
+    property DriverName: String read GetDriverName;
+    property ConnectionDefName: string read GetConnectionDefName;
+    property BaseUrl: String read GetBaseUrl;
+    property ExtUrl: String read GetExtUrl;
+
+    property LoggingFilename: String read GetLoggingFilename;
+
+    property Filename: String read GetFilename;
+
+  end;
+
+implementation
+uses
+  System.IOUtils;
+
+const
+  C_FILENAME = '..\etc\server.ini';
+
+{ TServerSettings }
+
+class destructor TServerSettings.Destroy;
+begin
+  if Assigned( FInstance ) then
+  begin
+    FInstance.Free;
+  end;
+end;
+
+function TServerSettings.GetBaseUrl: String;
+begin
+
+end;
+
+function TServerSettings.GetConnectionDefName: string;
+begin
+  Result := self.GetIniString('Definition', 'Name', 'temp' );
+
+end;
+
+function TServerSettings.GetDriverName: String;
+begin
+  Result := self.GetIniString('Driver', 'Name', 'FB');
+end;
+
+function TServerSettings.GetExtUrl: String;
+begin
+
+end;
+
+function TServerSettings.GetFilename: String;
+begin
+  Result := C_FILENAME;
+end;
+
+function TServerSettings.GetIniFile: TIniFile;
+var
+  LFilename: String;
+begin
+  LFilename := TPath.Combine(
+    TPath.GetLibraryPath,
+    self.GetFilename );
+
+
+  Result := TIniFile.Create( LFilename );
+end;
+
+function TServerSettings.GetIniString(ASection, AIdent,
+  ADefault: String): String;
+var
+  LIni: TIniFile;
+begin
+  LIni := GetIniFile;
+  try
+    Result := LIni.ReadString(ASection, AIdent, ADefault);
+  finally
+    LIni.Free;
+  end;
+
+end;
+
+function TServerSettings.GetLoggingFilename: String;
+begin
+
+
+end;
+
+procedure TServerSettings.LoadConnectionParams(AParams: TStrings);
+var
+  LIni: TIniFile;
+begin
+  LIni := GetIniFile;
+  try
+    LIni.ReadSectionValues('Connection', AParams);
+  finally
+    LIni.Free;
+  end;
+end;
+
+class function TServerSettings.Shared: TServerSettings;
+begin
+  if not Assigned( FInstance ) then
+  begin
+    FInstance := TServerSettings.Create;
+  end;
+  Result := FInstance;
+end;
+
+end.
