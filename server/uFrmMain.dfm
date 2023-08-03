@@ -2,7 +2,7 @@ object FrmMain: TFrmMain
   Left = 0
   Top = 0
   Caption = 'TMS XData Server'
-  ClientHeight = 242
+  ClientHeight = 384
   ClientWidth = 472
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,18 +13,16 @@ object FrmMain: TFrmMain
   OnCreate = FormCreate
   DesignSize = (
     472
-    242)
+    384)
   TextHeight = 13
   object mmInfo: TMemo
     Left = 8
     Top = 40
     Width = 452
-    Height = 194
+    Height = 336
     Anchors = [akLeft, akTop, akRight, akBottom]
     ReadOnly = True
     TabOrder = 0
-    ExplicitWidth = 448
-    ExplicitHeight = 193
   end
   object btStart: TButton
     Left = 8
